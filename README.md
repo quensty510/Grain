@@ -4,6 +4,6 @@
 gateway跨域、全局异常处理   
 整合了阿里云oss存储和视频点播  
 整合容联云短信服务  
-微信扫码登陆
+Oauth2微信扫码登陆  
 spring security + jwt 的RBAC权限管理  
 试了一下canal的数据库同步
