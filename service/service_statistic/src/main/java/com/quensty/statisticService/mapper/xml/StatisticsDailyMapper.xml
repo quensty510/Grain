@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quensty.statisticService.mapper.StatisticsDailyMapper">
+
+    <select id="queryDataForStatistic" resultType="com.quensty.statisticService.entity.vo.statisDataVo">
+        SELECT date_calculated as date,${type} as count
+        FROM statistics_daily
+        WHERE date_calculated BETWEEN  #{begin} AND #{end}
+    </select>
+</mapper>

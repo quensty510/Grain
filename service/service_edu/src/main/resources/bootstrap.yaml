@@ -1,0 +1,19 @@
+# 配置中心地址
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: b9e8caba-7cc7-42a8-9b65-d4fc55c1b34f
+        ext-config:
+            # 配置数据ID
+          - dataId: service-edu-dev.yaml
+            # 配置组
+            group: dev
+            # 是否刷新
+            refresh: true
+  # 该配置影  置中心中的dataId
+  application:
+    name: service-edu

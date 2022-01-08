@@ -1,0 +1,56 @@
+## 服务端口
+#server:
+#  port: 8001
+#spring:
+#  application:
+#    name: service-edu
+#  #    环境设置：dev、test、prod
+#  profiles:
+#    active: dev
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8&useUniCode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#  cloud:
+#    nacos:
+#      discovery:
+#        # nacos服务地址
+#        server-addr: 127.0.0.1:8848
+#  redis:
+#    host: ubuntu001
+#    password: root
+#    database: 0
+#    timeout: 1800000
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 20
+#        #最大阻塞等待时间(负数表示没限制)
+#        max-wait: -1
+#        max-idle: 5
+#        min-idle: 0
+#
+#
+#
+#  #  返回json的全局时间格式
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+##默认日志级别
+#logging:
+#  file:
+#    path: E:\\CODE\\workSpace_IDEA\\guli_parent\\log\\edu
+#  level:
+#    root: info
+##mybatis日志
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations: classpath*:**/*Mapper.xml
+#  # 设置hystrix超时时间，默认1000ms
+##  hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=6000
+#feign:
+#  hystrix:
+#    #开启熔断机制
+#    enabled: true

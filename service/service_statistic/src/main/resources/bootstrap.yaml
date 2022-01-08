@@ -1,0 +1,17 @@
+#配置中心地址
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: b9e8caba-7cc7-42a8-9b65-d4fc55c1b34f
+        ext-config:
+          - dataId: service-statistic-dev.properties
+            group: dev
+            refresh: true
+  # 该配置影响统一配置中心中的dataId
+  application:
+    name: service-statistics
+
+  profiles:
+    active: dev

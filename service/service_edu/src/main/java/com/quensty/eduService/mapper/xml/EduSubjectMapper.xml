@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quensty.eduService.mapper.EduSubjectMapper">
+
+    <resultMap id="subjectTree" type="com.quensty.eduService.entity.vo.SubjectTree">
+        <result property="id" column="id"/>
+        <result property="title" column="title"/>
+        <collection property="children" javaType="list" ofType="com.quensty.eduService.entity.vo.SubjectTree">
+            <result property="id" column="children_id"/>
+            <result property="title" column="children_title"/>
+        </collection>
+    </resultMap>
+    <select id="getSubjectTree" resultMap="subjectTree">
+        SELECT p.id,p.title,c.id as children_id,c.title as children_title
+        FROM edu_subject c
+                 RIGHT JOIN edu_subject p
+                            ON c.parent_id = p.id
+        where p.parent_id = '0'
+    </select>
+</mapper>
