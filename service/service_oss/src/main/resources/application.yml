@@ -26,7 +26,7 @@ aliyun:
   oss:
     file:
       endpoint: oss-cn-beijing.aliyuncs.com
-      keyid: LTAI5tC13CSVHJeNjtuTtJuZ
-      keysecret: cZa4gbRigJQr8F1b5H8O1rAgv5h7Nv
+      keyid: 
+      keysecret: 
 #      bucket可以在控制台创建，也可以使用java代码创建
       bucketname: 'edu-demo-oss'
